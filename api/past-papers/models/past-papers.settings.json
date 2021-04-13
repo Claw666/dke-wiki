@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "past_papers",
+  "info": {
+    "name": "PastPapers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "ExamType": {
+      "type": "string",
+      "default": "Regular",
+      "required": true
+    },
+    "Year": {
+      "type": "string",
+      "required": true
+    },
+    "PageCount": {
+      "type": "integer",
+      "required": true,
+      "max": 30
+    },
+    "Document": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "ExamFormat": {
+      "type": "string",
+      "default": "Closed Book",
+      "required": true
+    }
+  }
+}

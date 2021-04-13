@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "CourseCode": {
+      "type": "string",
+      "default": "KEN",
+      "required": true,
+      "unique": true,
+      "maxLength": 7,
+      "minLength": 7
+    },
+    "Credits": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 1,
+      "default": "4"
+    },
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "DegreeType": {
+      "type": "string",
+      "required": true
+    },
+    "Block": {
+      "type": "string",
+      "required": true,
+      "maxLength": 2
+    },
+    "Year": {
+      "type": "string",
+      "required": true,
+      "maxLength": 2
+    },
+    "Faculty": {
+      "type": "string",
+      "required": true,
+      "default": "DKE"
+    },
+    "PreviousNames": {
+      "type": "string",
+      "default": "None"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Prerequirements": {
+      "type": "text",
+      "required": true,
+      "default": "The course has no specific prerequisites."
+    },
+    "Tips": {
+      "type": "text",
+      "default": "The course doesn't have specific tips.",
+      "required": true
+    },
+    "Rating": {
+      "type": "float",
+      "default": 5,
+      "required": true,
+      "max": 5,
+      "min": 1
+    },
+    "Grading": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

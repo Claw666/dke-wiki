@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/past-papers",
+      "handler": "past-papers.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/past-papers/count",
+      "handler": "past-papers.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/past-papers/:id",
+      "handler": "past-papers.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/past-papers",
+      "handler": "past-papers.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/past-papers/:id",
+      "handler": "past-papers.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/past-papers/:id",
+      "handler": "past-papers.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

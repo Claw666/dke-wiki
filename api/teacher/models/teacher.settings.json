@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "name": "Teacher",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "RoomLocation": {
+      "type": "string",
+      "required": true
+    },
+    "Rating": {
+      "type": "integer",
+      "default": 5,
+      "required": true,
+      "max": 5,
+      "min": 1
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
